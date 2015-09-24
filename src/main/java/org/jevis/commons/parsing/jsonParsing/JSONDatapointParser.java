@@ -5,14 +5,14 @@
  */
 package org.jevis.commons.parsing.jsonParsing;
 
-import org.jevis.commons.parsing.GeneralMappingParser;
-import org.jevis.commons.parsing.inputHandler.InputHandler;
+//import org.jevis.commons.parsing.GeneralMappingParser;
+//import org.jevis.commons.parsing.inputHandler.InputHandler;
 
 /**
  *
  * @author ait-user
  */
-public class JSONDatapointParser implements GeneralMappingParser {
+public class JSONDatapointParser {
 
     private boolean _isInFile;
     private Long _datapoint;
@@ -64,9 +64,9 @@ public class JSONDatapointParser implements GeneralMappingParser {
         return _target;
     }
 
-    public void parse(InputHandler ic) {
+    /*public void parse(InputHandler ic) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    }*/
 
     public boolean isValueValid() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.

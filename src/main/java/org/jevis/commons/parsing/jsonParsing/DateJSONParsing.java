@@ -5,15 +5,15 @@
  */
 package org.jevis.commons.parsing.jsonParsing;
 
-import org.jevis.commons.parsing.GeneralDateParser;
-import org.jevis.commons.parsing.inputHandler.InputHandler;
+//import org.jevis.commons.parsing.GeneralDateParser;
+//import org.jevis.commons.parsing.inputHandler.InputHandler;
 import org.joda.time.DateTime;
 
 /**
  *
  * @author ait-user
  */
-public class DateJSONParsing implements GeneralDateParser {
+public class DateJSONParsing  {
 
     public String getTimeFormat() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
@@ -27,9 +27,9 @@ public class DateJSONParsing implements GeneralDateParser {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    public void parse(InputHandler ic) {
+  /*  public void parse(InputHandler ic) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    }*/
 
     public boolean isValueValid() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.

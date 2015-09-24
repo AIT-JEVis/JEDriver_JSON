@@ -5,14 +5,14 @@
  */
 package org.jevis.commons.parsing.jsonParsing;
 
-import org.jevis.commons.parsing.GeneralValueParser;
-import org.jevis.commons.parsing.inputHandler.InputHandler;
+//import org.jevis.commons.parsing.GeneralValueParser;
+//import org.jevis.commons.parsing.inputHandler.InputHandler;
 
 /**
  *
  * @author ait-user
  */
-public class ValueJSONParsing implements GeneralValueParser {
+public class ValueJSONParsing {
 
     public Double getValue() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
@@ -26,9 +26,9 @@ public class ValueJSONParsing implements GeneralValueParser {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    public void parse(InputHandler ic) {
+   /* public void parse(InputHandler ic) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    }*/
 
     public boolean isValueValid() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.

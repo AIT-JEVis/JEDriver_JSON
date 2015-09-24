@@ -9,9 +9,9 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import java.util.List;
 import org.jevis.api.JEVisObject;
-import org.jevis.commons.parsing.DataCollectorParser;
-import org.jevis.commons.parsing.Result;
-import org.jevis.commons.parsing.inputHandler.InputHandler;
+import org.jevis.commons.driver.Parser;
+import org.jevis.commons.driver.Result;
+import org.jevis.commons.driver.inputHandler.InputHandler;
 import org.w3c.dom.Document;
 
 import java.io.BufferedInputStream;
@@ -27,9 +27,9 @@ import org.jevis.api.JEVisClass;
 import org.jevis.api.JEVisException;
 import org.jevis.api.JEVisType;
 import org.jevis.commons.DatabaseHelper;
-import org.jevis.commons.JEVisTypes;
-import org.jevis.commons.parsing.csvParsing.CSVDatapointParser;
-import org.jevis.commons.parsing.xmlParsing.XMLParsing;
+//import org.jevis.commons.JEVisTypes;
+//import org.jevis.commons.parsing.csvParsing.CSVDatapointParser;
+//import org.jevis.commons.parsing.xmlParsing.XMLParsing;
 import org.joda.time.DateTime;
 import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
@@ -38,7 +38,7 @@ import org.joda.time.format.DateTimeFormatter;
  *
  * @author ait-user
  */
-public class JSONParsing implements DataCollectorParser {
+public class JSONParsing {
 
     private Integer _dateIndex;
     private Integer _timeIndex;
@@ -51,12 +51,12 @@ public class JSONParsing implements DataCollectorParser {
     
     
     
-    @Override
+    //@Override
     public List<Result> getResults() {
         return _results;
     }
 
-    @Override
+    //@Override
     public void parse(InputHandler ic) {
 
         BufferedInputStream  oj = (BufferedInputStream)ic.getRawInput();
@@ -106,7 +106,7 @@ public class JSONParsing implements DataCollectorParser {
         
     }
 
-    @Override
+    //@Override
     public void initialize(JEVisObject equipmentObject) {
 
            
@@ -115,7 +115,7 @@ public class JSONParsing implements DataCollectorParser {
             JEVisObject parserObject = equipmentObject.getChildren(parser, true).get(0);
             JEVisClass jeClass = parserObject.getJEVisClass();
 
-            JEVisType dateFormatType = jeClass.getType(JEVisTypes.Parser.DATE_FORMAT);
+           /* JEVisType dateFormatType = jeClass.getType(JEVisTypes.Parser.DATE_FORMAT);
             JEVisType timeFormatType = jeClass.getType(JEVisTypes.Parser.TIME_FORMAT);
             JEVisType decimalSeperatorType = jeClass.getType(JEVisTypes.Parser.DECIMAL_SEPERATOR);
             JEVisType thousandSeperatorType = jeClass.getType(JEVisTypes.Parser.THOUSAND_SEPERATOR);
@@ -128,15 +128,15 @@ public class JSONParsing implements DataCollectorParser {
             org.apache.log4j.Logger.getLogger(this.getClass().getName()).log(org.apache.log4j.Level.ALL, "DecimalSeperator: " + _decimalSeperator);
             _thousandSeperator = DatabaseHelper.getObjectAsString(parserObject, thousandSeperatorType);
             org.apache.log4j.Logger.getLogger(this.getClass().getName()).log(org.apache.log4j.Level.ALL, "ThousandSeperator: " + _thousandSeperator);
-
+*/
           
         } catch (JEVisException ex) {
-            Logger.getLogger(XMLParsing.class.getName()).log(Level.SEVERE, null, ex);
+          //  Logger.getLogger(XMLParsing.class.getName()).log(Level.SEVERE, null, ex);
         }
         
     }
 
-    @Override
+    //@Override
     public void addDataPointParser(Long datapointID, String target, String mappingIdentifier, String valueIdentifier) {
         _datapointParsers.add(new JSONDatapointParser(datapointID, target, mappingIdentifier, valueIdentifier, _decimalSeperator, _thousandSeperator));    
     }
