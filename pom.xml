@@ -4,7 +4,7 @@
     
     <groupId>org.jevis.commons.parsing.jsonParsing</groupId>
     <artifactId>JSONParsing</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
     
     <properties>
